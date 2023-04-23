@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rezepte</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='build/styles.css') }}">
+    </head>
+    <body>
+        <div class="row m-5">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header">Navigation</div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a 
+                                href="{{ url_for('list') }}" 
+                                class="list-group-item list-group-item-action d-flex {{ 'active' if route == 'list' else '' }}"
+                            >
+                                <div class="fw-bold">Startseite</div>
+                            </a>
+                            {% for recipe in recipes %}
+                                <a 
+                                    href="{{ url_for('recipe', wochentag=recipe.attrib['wochentag']) }}" 
+                                    class="list-group-item list-group-item-action {{ 'active' if route == recipe.attrib['wochentag'] else '' }}"
+                                >
+                                    <div class="fw-bold">{{ recipe.attrib['wochentag'] }}</div>
+                                    {{ recipe.attrib['name'] }}
+                                </a>
+                            {% endfor %}        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">Rezepte</div>
+                    <div class="card-body">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="{{ url_for('static', filename='build/app.js') }}"></script>
+    </body>
+</html>

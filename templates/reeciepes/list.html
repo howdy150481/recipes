@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}    
+    <ul class="list-group">
+        {% for recipe in recipes %}
+            <li class="list-group-item d-flex">
+                <a href="{{ url_for('recipe', wochentag=recipe.attrib['wochentag']) }}" class="ms-2 me-auto text-decoration-none text-dark">
+                    <div class="fw-bold">{{ recipe.attrib['wochentag'] }}</div>
+                    {{ recipe.attrib['name'] }}
+                </a>
+            </li>
+        {% endfor %}
+      </ul>
+{% endblock %}

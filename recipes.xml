@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wochenplan>
+  <rezept wochentag="Montag" name="Nudeln">
+    <zutaten>
+      <zutat menge="200g">Nudeln</zutat>
+      <zutat menge="100g">Tomatensoße</zutat>
+    </zutaten>
+    <anleitung>Koche Nudeln, erwärme Soße, mische beides.</anleitung>
+  </rezept>
+  <rezept wochentag="Dienstag" name="Salat">
+    <zutaten>
+      <zutat menge="100g">Gemischter Salat</zutat>
+      <zutat menge="50g">Dressing</zutat>
+    </zutaten>
+    <anleitung>Mische Salat und Dressing.</anleitung>
+  </rezept>
+  <rezept wochentag="Mittwoch" name="Reis">
+    <zutaten>
+      <zutat menge="150g">Reis</zutat>
+      <zutat menge="300ml">Wasser</zutat>
+    </zutaten>
+    <anleitung>Koche Reis in Wasser.</anleitung>
+  </rezept>
+  <rezept wochentag="Donnerstag" name="Sandwich">
+    <zutaten>
+      <zutat menge="2">Brotscheiben</zutat>
+      <zutat menge="50g">Aufschnitt</zutat>
+    </zutaten>
+    <anleitung>Belege Brot mit Aufschnitt.</anleitung>
+  </rezept>
+  <rezept wochentag="Freitag" name="Suppe">
+    <zutaten>
+      <zutat menge="200g">Gemüse</zutat>
+      <zutat menge="500ml">Brühe</zutat>
+    </zutaten>
+    <anleitung>Koche Gemüse in Brühe.</anleitung>
+  </rezept>
+  <rezept wochentag="Samstag" name="Omelett">
+    <zutaten>
+      <zutat menge="2">Eier</zutat>
+      <zutat menge="30g">Käse</zutat>
+    </zutaten>
+    <anleitung>Verquirl Eier, brate sie, streue Käse darauf.</anleitung>
+  </rezept>
+  <rezept wochentag="Sonntag" name="Joghurt">
+    <zutaten>
+      <zutat menge="200g">Joghurt</zutat>
+      <zutat menge="50g">Früchte</zutat>
+    </zutaten>
+    <anleitung>Mische Joghurt und Früchte.</anleitung>
+  </rezept>
+</wochenplan>
