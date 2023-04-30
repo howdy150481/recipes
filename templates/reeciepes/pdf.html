@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <title>PDF</title>
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .title {
+                width: 50%;
+            }
+            .image {
+                text-align: right;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>{{ recipe.get('name') }}</h1>
+            </div>
+            <div class="image">
+                <img style="height: 2cm;" src="{{ url_for('static', filename='images/logo.png', _external=True) }}" />
+            </div>
+        </div>
+        <ul>
+            {% for zutat in recipe.find('zutaten').findall('zutat') %}
+                <li>
+                    {{ zutat.get('menge') }}
+                    {{ zutat.text }}
+                </li>
+            {% endfor %}
+        </ul>
+        {{ recipe.find('anleitung').text }}
+    </body>
+</html>

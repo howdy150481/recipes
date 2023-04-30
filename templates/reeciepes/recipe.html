@@ -16,7 +16,14 @@
             </ul>
         </div>
         <div class="card-footer">
-            {{ recipe.find('anleitung').text }}
+            <div class="row">
+                <div class="col-10">
+                    {{ recipe.find('anleitung').text }}
+                </div>
+                <div class="col text-end">
+                    <a href="{{ url_for('pdf', wochentag=recipe.get('wochentag')) }}">Drucken</a>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
