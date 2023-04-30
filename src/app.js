@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'bootstrap';
 
-$(function() {
-    console.log('Moooh');
-})
+import { greet } from './js/scripts.js';
+const message = greet('World');
+console.log(message);
